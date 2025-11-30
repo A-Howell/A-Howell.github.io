@@ -2,11 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Custom Color Scheme */
-$background-color: #F3E9D7;
-$primary-color: #B8A5D6;
-$text-color: darken($primary-color, 25%);  /* Dark purple for general text */
-$heading-color: darken($primary-color, 30%); /* Darker purple for headings */
-$meta-color: darken($primary-color, 15%);    /* Medium purple for metadata */
+$lavender: #C4B5E0;
+$plum: #5D2A42;
+$cream: #EFF0D1;
+$teal: #77BA99;
+$brown: #99582A;
+
+$background-color: $cream;         /* Cream background */
+$primary-color: $lavender;         /* Lavender for header */
+$accent-color: $teal;              /* Teal for accents */
+$secondary-accent: $brown;         /* Brown for borders/highlights */
+$text-color: $plum;                /* Plum for text */
+$heading-color: $plum;             /* Plum for headings */
+$meta-color: lighten($plum, 20%);  /* Lighter plum for metadata */
 
 /* Override body and html background */
 html {
@@ -171,36 +179,38 @@ body {
 
 /* Links */
 a {
-  color: darken($primary-color, 20%) !important;
+  color: $plum !important;
 }
 
 a:visited {
-  color: darken($primary-color, 25%) !important;
+  color: darken($plum, 5%) !important;
 }
 
 a:hover {
-  color: darken($primary-color, 30%) !important;
+  color: lighten($plum, 10%) !important;
 }
 
 /* Post list */
 .post-list > li {
-  border-left: 4px solid $primary-color;
+  border-left: 4px solid $accent-color;
   padding-left: 15px;
+  margin-bottom: 30px;
 }
 
 .post-list h3 a {
-  color: darken($primary-color, 25%) !important;
+  color: $plum !important;
 }
 
 /* Code blocks */
 pre,
 code {
-  border: 1px solid $primary-color !important;
+  border: 1px solid $secondary-accent !important;
+  background-color: rgba($brown, 0.1) !important;
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid $primary-color !important;
+  border-left: 4px solid $secondary-accent !important;
   color: $text-color;
 }
 
